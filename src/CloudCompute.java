@@ -22,17 +22,14 @@ public class CloudCompute implements ICloudService{
 
         return cenaZaHodinu*hodiny;
     }
-
+    @Override
     public String getNazev() {
         return nazev;
-    }
-
-    public double getCenaZaHodinu() {
-        return cenaZaHodinu;
     }
 
     @Override
     public String toString() {
         return "Nazev sluzby: "+this.nazev+" Cena za hodinu: "+this.cenaZaHodinu;
     }
+
 }

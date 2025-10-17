@@ -30,20 +30,14 @@ public class CloudStorage implements ICloudService{
         }
     }
 
+    @Override
     public String getNazev() {
         return nazev;
-    }
-
-    public double getCenaZaGB() {
-        return cenaZaGB;
-    }
-
-    public int getPocetSpusteni() {
-        return pocetSpusteni;
     }
 
     @Override
     public String toString() {
         return "Nazev: "+this.nazev+" Cena za GB: "+this.cenaZaGB+" Pocet Spusteni: "+this.pocetSpusteni;
     }
+
 }

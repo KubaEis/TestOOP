@@ -4,4 +4,5 @@ public interface ICloudService {
     double vypocitejNaklady(int pocet);
     String getNazev();
     String toString();
+
 }

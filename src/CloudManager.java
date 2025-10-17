@@ -13,7 +13,6 @@ public class CloudManager {
     public void spustVsechnySluzby(){
         for (int i = 0; i < cloudServices.size(); i++) {
             cloudServices.get(i).spustSluzbu();
-
         }
     }
 
@@ -24,9 +23,12 @@ public class CloudManager {
     }
 
     public void vypisNaklady(int hodiny){
+        double naklady = 0;
         for (int i = 0; i < cloudServices.size(); i++) {
             System.out.println("Nazev sluzby: "+cloudServices.get(i).getNazev()+" Naklady: "+cloudServices.get(i).vypocitejNaklady(hodiny));
+            naklady = naklady + cloudServices.get(i).vypocitejNaklady(hodiny);
         }
+        System.out.println("Celkove naklady: "+naklady);
     }
 
     public void vypisInformace(){
@@ -34,4 +36,5 @@ public class CloudManager {
             System.out.println(cloudServices.get(i).toString());
         }
     }
+
 }
